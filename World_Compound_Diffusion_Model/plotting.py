@@ -37,8 +37,8 @@ def plot_absolute_repartitions(axis, patches, repartition_snapshots, add_legend=
     # Custom x axis
     axis.set_xticks(range(num_steps+1))
     axis.set_xlabel("Generations")
-    axis.set_ylabel("Oxygen amount")
-    axis.set_title("Amount of oxygen over time")
+    axis.set_ylabel("{} amount".format(patches[0].compound_name))
+    axis.set_title("Amount of {} over time".format(patches[0].compound_name))
 
     if add_legend:
         axis.legend(loc='upper left', bbox_to_anchor=(1,1), ncol=1)
@@ -60,8 +60,8 @@ def plot_relative_repartitions(axis, patches, repartition_snapshots, add_legend=
 
     axis.set_xticks(range(num_steps+1))
     axis.set_xlabel("Generations")
-    axis.set_ylabel("% of total Oxygen")
-    axis.set_title("Repartition of oxygen over time")
+    axis.set_ylabel("% of total {}".format(patches[0].compound_name))
+    axis.set_title("Repartition of {} over time".format(patches[0].compound_name))
 
     if add_legend:
         axis.legend(loc='upper left', bbox_to_anchor=(1,1), ncol=1)
